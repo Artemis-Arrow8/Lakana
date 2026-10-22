@@ -1,68 +1,69 @@
-import uuid
 import enum
-from sqlalchemy import Column, String, Boolean, DateTime, ForeignKey, Numeric, Enum, Text
-from sqlalchemy.dialects.postgresql import UUID
+from sqlalchemy import Column, Integer, String, Float, Boolean, Enum, DateTime, ForeignKey
 from sqlalchemy.sql import func
-from database import Base
-
-class PaymentStatus(str, enum.Enum):
-    PENDING = "PENDING"
-    SUCCESS = "SUCCESS"
-    FAILED = "FAILED"
-    CANCELLED = "CANCELLED"
+from app.database import Base
 
 class PaymentProvider(str, enum.Enum):
+    """Énumération des opérateurs de paiement pris en charge ou simulés."""
     ORANGE_MONEY = "ORANGE_MONEY"
     MOOV_MONEY = "MOOV_MONEY"
     WAVE = "WAVE"
-    SAMA = "SAMA"
     MOCK = "MOCK"
 
-class VerificationStatus(str, enum.Enum):
-    VERIFIED_SAFE = "VERIFIED_SAFE"
-    SUSPECT = "SUSPECT"
-    VERIFIED_SCAM = "VERIFIED_SCAM"
-    UNVERIFIED = "UNVERIFIED"
+class PaymentStatus(str, enum.Enum):
+    """Énumération des états possibles d'une transaction financière."""
+    PENDING = "PENDING"
+    SUCCESS = "SUCCESS"
+    FAILED = "FAILED"
 
-# Table Utilisateur
+class VerificationStatus(str, enum.Enum):
+    """Énumération des verdicts d'analyse de sécurité d'un contenu."""
+    VERIFIED_SAFE = "VERIFIED_SAFE"
+    VERIFIED_SCAM = "VERIFIED_SCAM"
+    SUSPICIOUS = "SUSPICIOUS"
+
 class User(Base):
+    """Modèle ORM représentant un utilisateur de l'application Lakana."""
     __tablename__ = "users"
 
-    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-    phone_number = Column(String(20), unique=True, nullable=False)
-    email = Column(String(255), unique=True, nullable=True)
-    full_name = Column(String(100), nullable=True)
-    preferred_language = Column(String(5), default="fr")
+    id = Column(Integer, primary_key=True, index=True)
+    phone_number = Column(String, unique=True, index=True, nullable=False)
     is_premium = Column(Boolean, default=False)
-    premium_expires_at = Column(DateTime(timezone=True), nullable=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
-    updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
 
-# Table Transaction (Mobile Money)
 class Transaction(Base):
+    """Modèle ORM représentant une transaction Mobile Money (abonnement Premium)."""
     __tablename__ = "transactions"
 
-    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-    user_id = Column(UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
-    reference = Column(String(100), unique=True, nullable=False)
-    aggregator_reference = Column(String(100), nullable=True)
-    amount = Column(Numeric(10, 2), nullable=False)
-    currency = Column(String(5), default="XOF")
-    provider = Column(Enum(PaymentProvider, name="payment_provider_enum"), nullable=False)
-    status = Column(Enum(PaymentStatus, name="payment_status_enum"), default=PaymentStatus.PENDING)
-    plan_type = Column(String(20), nullable=False)
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+    reference = Column(String, unique=True, index=True, nullable=False)
+    amount = Column(Float, nullable=False)
+    provider = Column(Enum(PaymentProvider), nullable=False)
+    status = Column(Enum(PaymentStatus), default=PaymentStatus.PENDING)
+    plan_type = Column(String, nullable=False)  # Type d'abonnement : "MONTHLY" ou "ANNUAL"
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
-# Table Verifications / Signalements
 class Verification(Base):
+    """Modèle ORM représentant l'historique des analyses de sécurité effectuées."""
     __tablename__ = "verifications"
 
-    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-    title = Column(String(255), nullable=False)
-    content_text = Column(Text, nullable=True)
-    analyzed_url = Column(Text, nullable=True)
-    status = Column(Enum(VerificationStatus, name="verification_status_enum"), default=VerificationStatus.UNVERIFIED)
-    explanation = Column(Text, nullable=True)
-    official_source_url = Column(Text, nullable=True)
-    category = Column(String(50), nullable=True)
+    id = Column(Integer, primary_key=True, index=True)
+    title = Column(String, nullable=False)
+    content_text = Column(String, nullable=True)
+    analyzed_url = Column(String, nullable=True)
+    status = Column(Enum(VerificationStatus), default=VerificationStatus.VERIFIED_SAFE)
+    explanation = Column(String, nullable=False)
+    category = Column(String, default="ARNAQUE_FINANCIERE")
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+
+class Report(Base):
+    """Modèle ORM représentant les signalements d'arnaques par les citoyens (Crowdsourcing)."""
+    __tablename__ = "reports"
+
+    id = Column(Integer, primary_key=True, index=True)
+    phone_number_reported = Column(String, index=True, nullable=True)  # Numéro de l'arnaqueur signalé
+    scam_url = Column(String, nullable=True)                           # Lien suspect signalé
+    description = Column(String, nullable=False)                        # Description de l'arnaque par le citoyen
+    category = Column(String, default="ARNAQUE_FINANCIERE")             # Catégorie (ex: Faux concours, Phishing...)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
