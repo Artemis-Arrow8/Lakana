@@ -631,3 +631,1411 @@
 2026-10-22 15:15:36,589 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (4.00ms)
 2026-10-22 15:15:36,642 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
 2026-10-22 15:15:36,652 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (9.93ms)
+2026-10-24 22:17:51,593 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:17:51,603 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:17:51,611 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:17:51,617 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-2D6F215D | Utilisateur Premium activé.
+2026-10-24 22:17:51,621 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (27.78ms)
+2026-10-24 22:17:51,628 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 22:17:51,642 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (14.30ms)
+2026-10-24 22:17:51,648 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 22:17:51,655 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (7.44ms)
+2026-10-24 22:17:51,659 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 22:17:51,662 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (2.84ms)
+2026-10-24 22:17:51,694 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 22:17:51,700 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 22:17:51,701 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (7.17ms)
+2026-10-24 22:17:51,736 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:17:51,743 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:17:51,745 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:17:51,749 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-49C0D5F0 | Utilisateur Premium activé.
+2026-10-24 22:17:51,751 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (15.09ms)
+2026-10-24 22:17:51,789 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:17:51,801 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (11.60ms)
+2026-10-24 22:17:51,837 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:17:51,845 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 22:17:51,849 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 22:17:51,856 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-5F9A99E1 | Utilisateur Premium activé.
+2026-10-24 22:17:51,858 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (20.78ms)
+2026-10-24 22:17:51,895 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:17:51,897 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:17:51,898 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:17:51,899 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 22:17:51,899 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (4.73ms)
+2026-10-24 22:17:51,921 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 22:17:51,930 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (9.38ms)
+2026-10-24 22:17:51,937 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 22:17:51,950 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (12.98ms)
+2026-10-24 22:17:52,301 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:17:52,319 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (18.67ms)
+2026-10-24 22:17:52,353 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:17:52,363 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (9.57ms)
+2026-10-24 22:17:52,370 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:17:52,377 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (7.00ms)
+2026-10-24 22:17:52,381 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:17:52,386 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (4.92ms)
+2026-10-24 22:17:52,420 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:17:54,060 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 500 (1639.94ms)
+2026-10-24 22:24:31,424 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:24:31,429 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:24:31,434 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:24:31,438 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-09D544EF | Utilisateur Premium activé.
+2026-10-24 22:24:31,439 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (15.34ms)
+2026-10-24 22:24:31,443 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 22:24:31,453 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (9.89ms)
+2026-10-24 22:24:31,458 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 22:24:31,464 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (6.35ms)
+2026-10-24 22:24:31,469 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 22:24:31,471 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (2.74ms)
+2026-10-24 22:24:31,491 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 22:24:31,495 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 22:24:31,496 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (4.67ms)
+2026-10-24 22:24:31,513 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:24:31,516 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:24:31,517 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:24:31,519 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-4DF97B54 | Utilisateur Premium activé.
+2026-10-24 22:24:31,520 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (7.14ms)
+2026-10-24 22:24:31,539 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:24:31,541 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (2.50ms)
+2026-10-24 22:24:31,555 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:24:31,557 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 22:24:31,557 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 22:24:31,559 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-8AB4C384 | Utilisateur Premium activé.
+2026-10-24 22:24:31,560 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (5.97ms)
+2026-10-24 22:24:31,579 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:24:31,582 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:24:31,583 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:24:31,584 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 22:24:31,585 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (6.55ms)
+2026-10-24 22:24:31,602 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 22:24:31,608 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (5.77ms)
+2026-10-24 22:24:31,611 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 22:24:31,615 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (4.24ms)
+2026-10-24 22:24:31,829 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:24:31,832 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (3.62ms)
+2026-10-24 22:24:31,853 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:24:31,856 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (2.43ms)
+2026-10-24 22:24:31,859 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:24:31,861 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (1.79ms)
+2026-10-24 22:24:31,882 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:24:31,885 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 403 (3.25ms)
+2026-10-24 22:24:50,744 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:24:50,748 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:24:50,753 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:24:50,757 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-8D4C8ED0 | Utilisateur Premium activé.
+2026-10-24 22:24:50,759 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (14.76ms)
+2026-10-24 22:24:50,765 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 22:24:50,779 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (13.88ms)
+2026-10-24 22:24:50,784 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 22:24:50,790 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (5.83ms)
+2026-10-24 22:24:50,795 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 22:24:50,798 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (3.66ms)
+2026-10-24 22:24:50,831 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 22:24:50,836 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 22:24:50,837 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (5.73ms)
+2026-10-24 22:24:50,852 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:24:50,854 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:24:50,857 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:24:50,859 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-0C54FCC6 | Utilisateur Premium activé.
+2026-10-24 22:24:50,861 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (9.47ms)
+2026-10-24 22:24:50,884 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:24:50,887 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (2.31ms)
+2026-10-24 22:24:50,905 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:24:50,907 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 22:24:50,908 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 22:24:50,910 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-A15AA2B6 | Utilisateur Premium activé.
+2026-10-24 22:24:50,912 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (6.83ms)
+2026-10-24 22:24:50,938 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:24:50,946 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:24:50,949 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:24:50,950 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 22:24:50,952 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (13.39ms)
+2026-10-24 22:24:50,983 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 22:24:50,994 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (11.22ms)
+2026-10-24 22:24:51,001 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 22:24:51,007 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (5.38ms)
+2026-10-24 22:24:51,227 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:24:51,232 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (4.20ms)
+2026-10-24 22:24:51,248 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:24:51,251 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (2.89ms)
+2026-10-24 22:24:51,255 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:24:51,257 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (1.42ms)
+2026-10-24 22:24:51,282 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:24:51,285 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 403 (3.35ms)
+2026-10-24 22:30:03,848 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:30:03,863 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:30:03,875 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:30:03,888 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-A5558F82 | Utilisateur Premium activé.
+2026-10-24 22:30:03,893 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (44.96ms)
+2026-10-24 22:30:03,903 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 22:30:03,917 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (14.05ms)
+2026-10-24 22:30:03,921 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 22:30:03,929 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (7.64ms)
+2026-10-24 22:30:03,934 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 22:30:03,937 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (3.41ms)
+2026-10-24 22:30:03,980 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 22:30:03,990 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 22:30:03,992 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (12.77ms)
+2026-10-24 22:30:04,038 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:30:04,043 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:30:04,045 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:30:04,053 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-7B1C1C38 | Utilisateur Premium activé.
+2026-10-24 22:30:04,056 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (17.33ms)
+2026-10-24 22:30:04,090 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:30:04,097 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (6.93ms)
+2026-10-24 22:30:04,122 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:30:04,126 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 22:30:04,128 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 22:30:04,131 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-72FC344D | Utilisateur Premium activé.
+2026-10-24 22:30:04,133 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (10.60ms)
+2026-10-24 22:30:04,153 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:30:04,156 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:30:04,158 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:30:04,158 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 22:30:04,159 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (6.40ms)
+2026-10-24 22:30:04,180 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 22:30:04,191 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (10.47ms)
+2026-10-24 22:30:04,196 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 22:30:04,201 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (4.80ms)
+2026-10-24 22:30:04,412 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:30:04,417 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (4.44ms)
+2026-10-24 22:30:04,434 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:30:04,439 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (4.37ms)
+2026-10-24 22:30:04,442 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:30:04,444 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (2.08ms)
+2026-10-24 22:30:04,463 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:30:04,466 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 403 (2.64ms)
+2026-10-24 22:30:37,163 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:30:37,167 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:30:37,173 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:30:37,178 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-0180A45F | Utilisateur Premium activé.
+2026-10-24 22:30:37,180 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (16.95ms)
+2026-10-24 22:30:37,184 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 22:30:37,194 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (9.52ms)
+2026-10-24 22:30:37,199 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 22:30:37,205 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (5.90ms)
+2026-10-24 22:30:37,209 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 22:30:37,212 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (3.20ms)
+2026-10-24 22:30:37,242 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 22:30:37,248 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 22:30:37,249 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (7.27ms)
+2026-10-24 22:30:37,276 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:30:37,279 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:30:37,281 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:30:37,287 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-6518D005 | Utilisateur Premium activé.
+2026-10-24 22:30:37,288 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (12.36ms)
+2026-10-24 22:30:37,314 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:30:37,320 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (6.14ms)
+2026-10-24 22:30:37,346 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:30:37,348 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 22:30:37,349 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 22:30:37,353 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-EF651B4E | Utilisateur Premium activé.
+2026-10-24 22:30:37,355 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (9.25ms)
+2026-10-24 22:30:37,378 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:30:37,380 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:30:37,381 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:30:37,382 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 22:30:37,383 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (5.30ms)
+2026-10-24 22:30:37,411 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 22:30:37,419 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (7.37ms)
+2026-10-24 22:30:37,423 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 22:30:37,428 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (5.18ms)
+2026-10-24 22:30:37,649 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:30:37,651 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (2.70ms)
+2026-10-24 22:30:37,668 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:30:37,671 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (2.41ms)
+2026-10-24 22:30:37,675 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:30:37,680 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (4.86ms)
+2026-10-24 22:30:37,701 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:30:37,704 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 403 (3.14ms)
+2026-10-24 22:30:50,823 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:30:50,830 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:30:50,836 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:30:50,842 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-AADE4F72 | Utilisateur Premium activé.
+2026-10-24 22:30:50,844 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (21.10ms)
+2026-10-24 22:30:50,858 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 22:30:50,871 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (13.14ms)
+2026-10-24 22:30:50,878 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 22:30:50,890 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (12.10ms)
+2026-10-24 22:30:50,895 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 22:30:50,901 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (5.46ms)
+2026-10-24 22:30:50,937 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 22:30:50,941 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 22:30:50,941 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (5.02ms)
+2026-10-24 22:30:50,968 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:30:50,973 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:30:50,975 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:30:50,978 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-4B319AB4 | Utilisateur Premium activé.
+2026-10-24 22:30:50,979 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (11.11ms)
+2026-10-24 22:30:50,997 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:30:50,999 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (2.69ms)
+2026-10-24 22:30:51,015 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:30:51,016 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 22:30:51,017 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 22:30:51,020 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-F48E995A | Utilisateur Premium activé.
+2026-10-24 22:30:51,022 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (7.02ms)
+2026-10-24 22:30:51,037 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:30:51,040 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:30:51,041 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:30:51,041 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 22:30:51,042 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (5.17ms)
+2026-10-24 22:30:51,061 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 22:30:51,067 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (6.54ms)
+2026-10-24 22:30:51,073 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 22:30:51,076 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (3.50ms)
+2026-10-24 22:30:51,277 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:30:51,280 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (3.06ms)
+2026-10-24 22:30:51,298 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:30:51,300 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (2.58ms)
+2026-10-24 22:30:51,307 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:30:51,308 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (1.97ms)
+2026-10-24 22:30:51,329 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:30:51,333 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 403 (4.01ms)
+2026-10-24 22:31:11,628 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:31:11,633 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:31:11,639 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:31:11,646 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-DEAEE69A | Utilisateur Premium activé.
+2026-10-24 22:31:11,647 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (19.48ms)
+2026-10-24 22:31:11,656 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 22:31:11,668 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (11.34ms)
+2026-10-24 22:31:11,673 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 22:31:11,677 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (4.35ms)
+2026-10-24 22:31:11,681 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 22:31:11,683 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (2.71ms)
+2026-10-24 22:31:11,707 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 22:31:11,714 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 22:31:11,714 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (6.96ms)
+2026-10-24 22:31:11,745 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:31:11,749 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:31:11,751 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:31:11,759 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-2E74F879 | Utilisateur Premium activé.
+2026-10-24 22:31:11,762 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (17.10ms)
+2026-10-24 22:31:11,798 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:31:11,802 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (4.24ms)
+2026-10-24 22:31:11,833 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:31:11,836 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 22:31:11,838 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 22:31:11,842 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-D044E35D | Utilisateur Premium activé.
+2026-10-24 22:31:11,843 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (10.64ms)
+2026-10-24 22:31:11,874 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:31:11,880 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:31:11,881 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:31:11,882 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 22:31:11,883 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (8.48ms)
+2026-10-24 22:31:11,918 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 22:31:11,940 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (21.25ms)
+2026-10-24 22:31:11,949 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 22:31:11,958 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (8.78ms)
+2026-10-24 22:31:12,392 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:31:12,397 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (4.88ms)
+2026-10-24 22:31:12,416 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:31:12,420 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (4.32ms)
+2026-10-24 22:31:12,427 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:31:12,433 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (6.17ms)
+2026-10-24 22:31:12,462 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:31:12,466 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 403 (3.30ms)
+2026-10-24 22:34:08,449 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:34:08,456 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:34:08,461 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:34:08,466 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-3B539066 | Utilisateur Premium activé.
+2026-10-24 22:34:08,467 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (18.18ms)
+2026-10-24 22:34:08,470 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 22:34:08,477 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (6.84ms)
+2026-10-24 22:34:08,481 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 22:34:08,486 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (4.54ms)
+2026-10-24 22:34:08,488 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 22:34:08,490 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (2.04ms)
+2026-10-24 22:34:08,510 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 22:34:08,514 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 22:34:08,515 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (4.75ms)
+2026-10-24 22:34:08,533 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:34:08,535 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:34:08,538 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:34:08,541 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-EDE5DB75 | Utilisateur Premium activé.
+2026-10-24 22:34:08,542 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (8.56ms)
+2026-10-24 22:34:08,556 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:34:08,559 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (2.58ms)
+2026-10-24 22:34:08,577 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:34:08,581 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 22:34:08,582 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 22:34:08,584 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-FC16E079 | Utilisateur Premium activé.
+2026-10-24 22:34:08,585 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (7.44ms)
+2026-10-24 22:34:08,602 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:34:08,604 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:34:08,604 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:34:08,605 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 22:34:08,606 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (3.83ms)
+2026-10-24 22:34:08,622 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 22:34:08,628 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (5.47ms)
+2026-10-24 22:34:08,632 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 22:34:08,636 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (4.43ms)
+2026-10-24 22:34:08,842 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:34:08,846 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (3.14ms)
+2026-10-24 22:34:08,850 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:34:08,852 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (1.98ms)
+2026-10-24 22:34:08,867 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:34:08,874 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (7.56ms)
+2026-10-24 22:34:08,888 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:34:08,890 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (2.02ms)
+2026-10-24 22:34:08,914 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:34:08,919 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 403 (4.68ms)
+2026-10-24 22:34:32,643 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:34:32,650 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:34:32,657 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:34:32,662 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-27891553 | Utilisateur Premium activé.
+2026-10-24 22:34:32,664 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (20.87ms)
+2026-10-24 22:34:32,670 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 22:34:32,679 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (8.94ms)
+2026-10-24 22:34:32,684 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 22:34:32,690 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (5.30ms)
+2026-10-24 22:34:32,693 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 22:34:32,695 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (2.70ms)
+2026-10-24 22:34:32,713 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 22:34:32,721 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 22:34:32,722 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (8.76ms)
+2026-10-24 22:34:32,739 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:34:32,740 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:34:32,741 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:34:32,743 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-96D74276 | Utilisateur Premium activé.
+2026-10-24 22:34:32,744 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (4.95ms)
+2026-10-24 22:34:32,763 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:34:32,766 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (3.58ms)
+2026-10-24 22:34:32,782 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:34:32,785 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 22:34:32,787 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 22:34:32,789 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-7301AD97 | Utilisateur Premium activé.
+2026-10-24 22:34:32,790 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (7.88ms)
+2026-10-24 22:34:32,811 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:34:32,816 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:34:32,818 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:34:32,818 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 22:34:32,819 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (8.23ms)
+2026-10-24 22:34:32,847 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 22:34:32,863 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (15.57ms)
+2026-10-24 22:34:32,870 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 22:34:32,875 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (5.71ms)
+2026-10-24 22:34:33,140 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:34:33,143 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (3.05ms)
+2026-10-24 22:34:33,148 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:34:33,151 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (3.25ms)
+2026-10-24 22:34:33,157 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:34:33,159 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (1.68ms)
+2026-10-24 22:34:33,176 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:34:33,178 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (1.97ms)
+2026-10-24 22:34:33,205 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:34:33,209 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 403 (3.44ms)
+2026-10-24 22:38:09,529 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:38:09,535 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:38:09,542 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:38:09,547 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-05863CAA | Utilisateur Premium activé.
+2026-10-24 22:38:09,548 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (18.84ms)
+2026-10-24 22:38:09,553 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 22:38:09,562 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (9.55ms)
+2026-10-24 22:38:09,567 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 22:38:09,576 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (9.35ms)
+2026-10-24 22:38:09,584 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 22:38:09,587 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (3.19ms)
+2026-10-24 22:38:09,613 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 22:38:09,618 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 22:38:09,619 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (5.47ms)
+2026-10-24 22:38:09,639 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:38:09,642 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:38:09,643 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:38:09,645 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-AD0E0689 | Utilisateur Premium activé.
+2026-10-24 22:38:09,646 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (6.85ms)
+2026-10-24 22:38:09,669 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:38:09,673 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (3.93ms)
+2026-10-24 22:38:09,691 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:38:09,696 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 22:38:09,697 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 22:38:09,699 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-316F8384 | Utilisateur Premium activé.
+2026-10-24 22:38:09,700 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (9.07ms)
+2026-10-24 22:38:09,718 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:38:09,721 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:38:09,723 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:38:09,723 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 22:38:09,725 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (7.20ms)
+2026-10-24 22:38:09,744 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 22:38:09,751 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (6.96ms)
+2026-10-24 22:38:09,754 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 22:38:09,759 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (4.70ms)
+2026-10-24 22:38:09,846 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:38:09,852 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (5.57ms)
+2026-10-24 22:38:09,881 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:38:09,885 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (4.03ms)
+2026-10-24 22:38:09,891 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:38:09,893 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (2.04ms)
+2026-10-24 22:38:09,921 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:38:09,924 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (3.40ms)
+2026-10-24 22:38:10,105 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:38:10,107 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 403 (2.85ms)
+2026-10-24 22:40:06,133 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:40:06,144 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:40:06,148 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:40:06,153 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-F1AF504A | Utilisateur Premium activé.
+2026-10-24 22:40:06,154 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (20.64ms)
+2026-10-24 22:40:06,159 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 22:40:06,166 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (7.97ms)
+2026-10-24 22:40:06,171 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 22:40:06,177 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (5.30ms)
+2026-10-24 22:40:06,181 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 22:40:06,184 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (2.61ms)
+2026-10-24 22:40:06,212 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 22:40:06,216 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 22:40:06,217 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (4.88ms)
+2026-10-24 22:40:06,246 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:40:06,249 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:40:06,250 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:40:06,252 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-EB964D10 | Utilisateur Premium activé.
+2026-10-24 22:40:06,253 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (7.82ms)
+2026-10-24 22:40:06,276 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:40:06,279 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (2.43ms)
+2026-10-24 22:40:06,296 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:40:06,299 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 22:40:06,300 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 22:40:06,301 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-16368876 | Utilisateur Premium activé.
+2026-10-24 22:40:06,303 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (6.48ms)
+2026-10-24 22:40:06,321 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:40:06,324 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:40:06,325 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:40:06,325 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 22:40:06,326 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (4.91ms)
+2026-10-24 22:40:06,343 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 22:40:06,351 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (7.96ms)
+2026-10-24 22:40:06,366 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 22:40:06,373 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (6.79ms)
+2026-10-24 22:40:06,487 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:40:06,494 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (6.77ms)
+2026-10-24 22:40:06,510 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:40:06,511 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (1.44ms)
+2026-10-24 22:40:06,540 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:40:06,543 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (3.53ms)
+2026-10-24 22:40:06,574 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:40:06,581 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (7.05ms)
+2026-10-24 22:40:06,606 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:40:06,712 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (106.66ms)
+2026-10-24 22:41:54,675 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:41:54,683 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:41:54,688 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:41:54,694 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-E4643206 | Utilisateur Premium activé.
+2026-10-24 22:41:54,695 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (20.49ms)
+2026-10-24 22:41:54,706 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 22:41:54,715 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (8.65ms)
+2026-10-24 22:41:54,719 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 22:41:54,724 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (5.06ms)
+2026-10-24 22:41:54,728 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 22:41:54,731 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (2.75ms)
+2026-10-24 22:41:54,752 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 22:41:54,757 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 22:41:54,758 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (5.99ms)
+2026-10-24 22:41:54,776 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:41:54,779 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:41:54,780 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:41:54,782 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-2B6A3DFE | Utilisateur Premium activé.
+2026-10-24 22:41:54,783 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (7.03ms)
+2026-10-24 22:41:54,801 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:41:54,804 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (3.54ms)
+2026-10-24 22:41:54,819 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:41:54,822 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 22:41:54,823 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 22:41:54,827 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-6D7BE7C0 | Utilisateur Premium activé.
+2026-10-24 22:41:54,828 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (8.58ms)
+2026-10-24 22:41:54,848 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:41:54,853 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:41:54,855 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:41:54,856 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 22:41:54,857 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (8.98ms)
+2026-10-24 22:41:54,878 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 22:41:54,886 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (7.98ms)
+2026-10-24 22:41:54,891 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 22:41:54,897 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (5.84ms)
+2026-10-24 22:41:54,964 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:41:54,968 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (3.39ms)
+2026-10-24 22:41:54,971 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:41:54,973 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (1.40ms)
+2026-10-24 22:41:54,978 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:41:54,979 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (1.69ms)
+2026-10-24 22:41:54,995 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:41:54,997 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (2.27ms)
+2026-10-24 22:41:55,013 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:41:55,079 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (65.80ms)
+2026-10-24 22:43:00,259 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:43:00,269 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:43:00,276 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:43:00,283 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-77652178 | Utilisateur Premium activé.
+2026-10-24 22:43:00,285 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (26.29ms)
+2026-10-24 22:43:00,297 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 22:43:00,313 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (16.75ms)
+2026-10-24 22:43:00,319 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 22:43:00,326 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (6.68ms)
+2026-10-24 22:43:00,330 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 22:43:00,333 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (3.03ms)
+2026-10-24 22:43:00,360 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 22:43:00,365 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 22:43:00,367 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (6.61ms)
+2026-10-24 22:43:00,392 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:43:00,395 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:43:00,397 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:43:00,403 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-07264407 | Utilisateur Premium activé.
+2026-10-24 22:43:00,405 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (12.83ms)
+2026-10-24 22:43:00,427 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:43:00,432 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (5.30ms)
+2026-10-24 22:43:00,460 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:43:00,464 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 22:43:00,467 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 22:43:00,472 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-C7B36790 | Utilisateur Premium activé.
+2026-10-24 22:43:00,474 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (14.01ms)
+2026-10-24 22:43:00,507 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:43:00,509 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:43:00,511 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:43:00,512 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 22:43:00,512 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (5.92ms)
+2026-10-24 22:43:00,546 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 22:43:00,567 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (21.57ms)
+2026-10-24 22:43:00,573 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 22:43:00,578 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (4.19ms)
+2026-10-24 22:43:00,673 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:43:00,678 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (4.83ms)
+2026-10-24 22:43:00,684 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:43:00,686 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (2.20ms)
+2026-10-24 22:43:00,690 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:43:00,692 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (1.86ms)
+2026-10-24 22:43:00,717 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:43:00,722 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (5.30ms)
+2026-10-24 22:43:00,756 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:43:00,864 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (107.44ms)
+2026-10-24 22:44:54,030 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:44:54,044 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:44:54,052 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:44:54,060 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-E2A8A1E6 | Utilisateur Premium activé.
+2026-10-24 22:44:54,061 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (31.74ms)
+2026-10-24 22:44:54,068 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 22:44:54,078 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (10.59ms)
+2026-10-24 22:44:54,082 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 22:44:54,088 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (5.47ms)
+2026-10-24 22:44:54,092 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 22:44:54,095 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (3.14ms)
+2026-10-24 22:44:54,121 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 22:44:54,125 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 22:44:54,126 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (5.14ms)
+2026-10-24 22:44:54,184 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:44:54,194 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:44:54,201 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:44:54,212 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-78D1364A | Utilisateur Premium activé.
+2026-10-24 22:44:54,216 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (32.81ms)
+2026-10-24 22:44:54,264 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:44:54,269 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (5.19ms)
+2026-10-24 22:44:54,309 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:44:54,314 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 22:44:54,316 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 22:44:54,319 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-F3672C00 | Utilisateur Premium activé.
+2026-10-24 22:44:54,321 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (12.36ms)
+2026-10-24 22:44:54,348 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:44:54,351 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:44:54,353 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:44:54,354 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 22:44:54,355 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (7.01ms)
+2026-10-24 22:44:54,382 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 22:44:54,394 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (12.55ms)
+2026-10-24 22:44:54,401 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 22:44:54,407 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (5.50ms)
+2026-10-24 22:44:54,509 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:44:54,515 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (5.83ms)
+2026-10-24 22:44:54,521 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:44:54,524 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (3.20ms)
+2026-10-24 22:44:54,532 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:44:54,535 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (2.69ms)
+2026-10-24 22:44:54,556 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:44:54,559 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (2.71ms)
+2026-10-24 22:44:54,591 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:44:54,744 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (153.83ms)
+2026-10-24 22:46:21,257 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:46:21,269 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:46:21,276 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:46:21,285 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-A271EBDF | Utilisateur Premium activé.
+2026-10-24 22:46:21,286 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (29.36ms)
+2026-10-24 22:46:21,293 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 22:46:21,304 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (11.40ms)
+2026-10-24 22:46:21,308 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 22:46:21,315 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (6.78ms)
+2026-10-24 22:46:21,322 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 22:46:21,325 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (3.45ms)
+2026-10-24 22:46:21,359 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 22:46:21,364 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 22:46:21,366 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (7.06ms)
+2026-10-24 22:46:21,389 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:46:21,393 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:46:21,396 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:46:21,400 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-99004889 | Utilisateur Premium activé.
+2026-10-24 22:46:21,402 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (12.52ms)
+2026-10-24 22:46:21,429 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:46:21,433 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (3.87ms)
+2026-10-24 22:46:21,457 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:46:21,462 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 22:46:21,464 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 22:46:21,467 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-C6F28539 | Utilisateur Premium activé.
+2026-10-24 22:46:21,469 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (11.66ms)
+2026-10-24 22:46:21,492 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:46:21,496 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:46:21,497 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:46:21,498 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 22:46:21,499 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (7.67ms)
+2026-10-24 22:46:21,523 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 22:46:21,534 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (11.34ms)
+2026-10-24 22:46:21,539 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 22:46:21,544 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (5.12ms)
+2026-10-24 22:46:21,634 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:46:21,639 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (4.75ms)
+2026-10-24 22:46:21,644 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:46:21,646 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (2.58ms)
+2026-10-24 22:46:21,653 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:46:21,655 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (2.16ms)
+2026-10-24 22:46:21,675 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:46:21,678 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (3.84ms)
+2026-10-24 22:46:21,702 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:46:21,875 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (173.32ms)
+2026-10-24 22:46:21,901 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:46:21,905 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (3.63ms)
+2026-10-24 22:48:32,866 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:48:32,880 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:48:32,887 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:48:32,897 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-B3885872 | Utilisateur Premium activé.
+2026-10-24 22:48:32,899 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (32.84ms)
+2026-10-24 22:48:32,905 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 22:48:32,919 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (14.57ms)
+2026-10-24 22:48:32,927 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 22:48:32,935 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (7.74ms)
+2026-10-24 22:48:32,945 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 22:48:32,950 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (5.11ms)
+2026-10-24 22:48:32,988 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 22:48:33,000 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 22:48:33,001 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (13.67ms)
+2026-10-24 22:48:33,044 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:48:33,048 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:48:33,053 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:48:33,058 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-89F67CCF | Utilisateur Premium activé.
+2026-10-24 22:48:33,059 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (15.53ms)
+2026-10-24 22:48:33,096 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:48:33,101 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (4.38ms)
+2026-10-24 22:48:33,134 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:48:33,146 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 22:48:33,148 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 22:48:33,153 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-BA50BBF3 | Utilisateur Premium activé.
+2026-10-24 22:48:33,156 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (22.16ms)
+2026-10-24 22:48:33,220 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:48:33,230 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:48:33,232 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:48:33,232 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 22:48:33,234 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (14.33ms)
+2026-10-24 22:48:33,270 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 22:48:33,287 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (16.93ms)
+2026-10-24 22:48:33,300 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 22:48:33,310 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (10.04ms)
+2026-10-24 22:48:33,433 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:48:33,438 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (3.58ms)
+2026-10-24 22:48:33,447 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:48:33,450 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (3.58ms)
+2026-10-24 22:48:33,457 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:48:33,461 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (4.10ms)
+2026-10-24 22:48:33,480 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:48:33,483 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (2.45ms)
+2026-10-24 22:48:33,520 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:48:33,646 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (126.33ms)
+2026-10-24 22:48:33,671 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:48:33,677 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (5.62ms)
+2026-10-24 22:48:33,719 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:48:33,733 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 422 (14.44ms)
+2026-10-24 22:51:33,949 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:51:33,960 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:51:33,967 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:51:33,978 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-B6B109D9 | Utilisateur Premium activé.
+2026-10-24 22:51:33,980 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (31.23ms)
+2026-10-24 22:51:33,989 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 22:51:34,003 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (13.46ms)
+2026-10-24 22:51:34,011 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 22:51:34,019 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (8.42ms)
+2026-10-24 22:51:34,027 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 22:51:34,032 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (4.62ms)
+2026-10-24 22:51:34,068 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 22:51:34,076 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 22:51:34,077 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (8.77ms)
+2026-10-24 22:51:34,116 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:51:34,128 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:51:34,131 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:51:34,139 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-F3EB5EE6 | Utilisateur Premium activé.
+2026-10-24 22:51:34,143 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (27.33ms)
+2026-10-24 22:51:34,214 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:51:34,221 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (7.35ms)
+2026-10-24 22:51:34,247 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:51:34,250 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 22:51:34,251 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 22:51:34,254 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-89B8755A | Utilisateur Premium activé.
+2026-10-24 22:51:34,256 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (9.02ms)
+2026-10-24 22:51:34,276 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:51:34,278 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:51:34,279 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:51:34,279 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 22:51:34,280 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (4.30ms)
+2026-10-24 22:51:34,304 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 22:51:34,316 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (12.06ms)
+2026-10-24 22:51:34,322 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 22:51:34,329 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (6.86ms)
+2026-10-24 22:51:34,421 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:51:34,427 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (5.22ms)
+2026-10-24 22:51:34,432 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:51:34,435 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (2.47ms)
+2026-10-24 22:51:34,442 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:51:34,447 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (4.78ms)
+2026-10-24 22:51:34,470 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:51:34,473 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (3.32ms)
+2026-10-24 22:51:34,494 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:51:34,609 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (115.11ms)
+2026-10-24 22:51:34,635 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:51:34,642 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (7.54ms)
+2026-10-24 22:51:34,684 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:51:34,691 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 422 (6.48ms)
+2026-10-24 22:55:43,803 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:55:43,818 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:55:43,825 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:55:43,833 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-E04C553D | Utilisateur Premium activé.
+2026-10-24 22:55:43,835 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (32.41ms)
+2026-10-24 22:55:43,843 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 22:55:43,854 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (11.78ms)
+2026-10-24 22:55:43,861 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 22:55:43,867 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (6.64ms)
+2026-10-24 22:55:43,874 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 22:55:43,879 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (4.27ms)
+2026-10-24 22:55:43,910 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 22:55:43,916 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 22:55:43,917 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (7.64ms)
+2026-10-24 22:55:43,958 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:55:43,968 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:55:43,970 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:55:43,974 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-DFDD19F3 | Utilisateur Premium activé.
+2026-10-24 22:55:43,977 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (18.84ms)
+2026-10-24 22:55:44,012 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:55:44,021 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (8.50ms)
+2026-10-24 22:55:44,059 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:55:44,068 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 22:55:44,071 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 22:55:44,075 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-37BC3AFC | Utilisateur Premium activé.
+2026-10-24 22:55:44,076 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (17.68ms)
+2026-10-24 22:55:44,128 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:55:44,135 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:55:44,139 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:55:44,139 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 22:55:44,141 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (13.67ms)
+2026-10-24 22:55:44,187 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 22:55:44,204 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (17.40ms)
+2026-10-24 22:55:44,216 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 22:55:44,227 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (11.24ms)
+2026-10-24 22:55:44,385 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:55:44,391 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (6.22ms)
+2026-10-24 22:55:44,403 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:55:44,406 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (3.19ms)
+2026-10-24 22:55:44,417 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:55:44,422 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (5.03ms)
+2026-10-24 22:55:44,457 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:55:44,460 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (3.09ms)
+2026-10-24 22:55:44,483 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:55:44,631 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (147.97ms)
+2026-10-24 22:55:44,771 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:55:44,774 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (3.02ms)
+2026-10-24 22:55:44,812 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:55:44,816 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 422 (4.25ms)
+2026-10-24 22:55:44,843 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:55:44,848 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (5.82ms)
+2026-10-24 22:55:44,877 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:55:44,885 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (7.96ms)
+2026-10-24 22:57:39,767 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:57:39,779 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:57:39,786 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:57:39,794 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-0054408B | Utilisateur Premium activé.
+2026-10-24 22:57:39,796 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (28.62ms)
+2026-10-24 22:57:39,809 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 22:57:39,821 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (12.75ms)
+2026-10-24 22:57:39,829 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 22:57:39,839 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (9.48ms)
+2026-10-24 22:57:39,850 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 22:57:39,854 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (4.13ms)
+2026-10-24 22:57:39,885 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 22:57:39,893 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 22:57:39,894 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (8.83ms)
+2026-10-24 22:57:39,920 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:57:39,922 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:57:39,924 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:57:39,929 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-A7819595 | Utilisateur Premium activé.
+2026-10-24 22:57:39,931 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (11.07ms)
+2026-10-24 22:57:39,951 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:57:39,954 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (3.63ms)
+2026-10-24 22:57:39,972 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:57:39,975 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 22:57:39,977 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 22:57:39,980 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-0615460B | Utilisateur Premium activé.
+2026-10-24 22:57:39,982 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (10.67ms)
+2026-10-24 22:57:40,004 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:57:40,006 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:57:40,007 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:57:40,009 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 22:57:40,010 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (6.78ms)
+2026-10-24 22:57:40,034 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 22:57:40,045 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (10.97ms)
+2026-10-24 22:57:40,051 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 22:57:40,056 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (4.97ms)
+2026-10-24 22:57:40,185 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:57:40,189 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (4.11ms)
+2026-10-24 22:57:40,197 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:57:40,199 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (1.91ms)
+2026-10-24 22:57:40,204 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:57:40,206 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (2.42ms)
+2026-10-24 22:57:40,224 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:57:40,229 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (4.84ms)
+2026-10-24 22:57:40,248 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:57:40,377 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (128.55ms)
+2026-10-24 22:57:40,406 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:57:40,415 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (8.87ms)
+2026-10-24 22:57:40,468 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:57:40,472 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 422 (4.17ms)
+2026-10-24 22:57:40,505 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:57:40,517 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (11.94ms)
+2026-10-24 22:57:40,582 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:57:40,593 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (10.42ms)
+2026-10-24 22:59:42,358 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:59:42,368 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:59:42,375 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:59:42,384 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-9CBCADD4 | Utilisateur Premium activé.
+2026-10-24 22:59:42,385 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (28.00ms)
+2026-10-24 22:59:42,392 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 22:59:42,404 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (11.99ms)
+2026-10-24 22:59:42,411 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 22:59:42,418 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (6.88ms)
+2026-10-24 22:59:42,426 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 22:59:42,429 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (3.66ms)
+2026-10-24 22:59:42,454 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 22:59:42,461 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 22:59:42,462 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (7.40ms)
+2026-10-24 22:59:42,491 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:59:42,495 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:59:42,497 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:59:42,502 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-F39A3270 | Utilisateur Premium activé.
+2026-10-24 22:59:42,504 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (12.81ms)
+2026-10-24 22:59:42,536 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:59:42,542 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (5.56ms)
+2026-10-24 22:59:42,569 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:59:42,574 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 22:59:42,575 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 22:59:42,579 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-846FAD4E | Utilisateur Premium activé.
+2026-10-24 22:59:42,582 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (12.58ms)
+2026-10-24 22:59:42,608 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 22:59:42,613 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 22:59:42,615 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 22:59:42,616 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 22:59:42,617 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (8.74ms)
+2026-10-24 22:59:42,643 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 22:59:42,653 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (10.44ms)
+2026-10-24 22:59:42,659 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 22:59:42,665 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (6.16ms)
+2026-10-24 22:59:42,759 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:59:42,764 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (5.10ms)
+2026-10-24 22:59:42,768 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:59:42,770 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (1.71ms)
+2026-10-24 22:59:42,776 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:59:42,778 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (2.03ms)
+2026-10-24 22:59:42,801 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 22:59:42,805 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (4.31ms)
+2026-10-24 22:59:42,826 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:59:43,008 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (181.47ms)
+2026-10-24 22:59:43,056 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:59:43,061 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (4.83ms)
+2026-10-24 22:59:43,101 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:59:43,106 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 422 (4.44ms)
+2026-10-24 22:59:43,135 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:59:43,139 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (4.12ms)
+2026-10-24 22:59:43,175 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:59:43,187 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (12.10ms)
+2026-10-24 22:59:43,216 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:59:43,220 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (4.25ms)
+2026-10-24 22:59:43,227 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:59:43,230 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (2.41ms)
+2026-10-24 22:59:43,234 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:59:43,236 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 403 (2.14ms)
+2026-10-24 22:59:43,339 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 22:59:43,344 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (5.89ms)
+2026-10-24 23:00:54,063 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:00:54,077 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 23:00:54,084 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 23:00:54,093 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-93ECF951 | Utilisateur Premium activé.
+2026-10-24 23:00:54,094 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (31.48ms)
+2026-10-24 23:00:54,101 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 23:00:54,111 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (10.23ms)
+2026-10-24 23:00:54,114 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 23:00:54,121 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (6.09ms)
+2026-10-24 23:00:54,124 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 23:00:54,126 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (2.48ms)
+2026-10-24 23:00:54,154 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 23:00:54,159 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 23:00:54,161 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (6.60ms)
+2026-10-24 23:00:54,180 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:00:54,182 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 23:00:54,183 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 23:00:54,187 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-1ECC3156 | Utilisateur Premium activé.
+2026-10-24 23:00:54,188 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (7.95ms)
+2026-10-24 23:00:54,210 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:00:54,215 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (4.09ms)
+2026-10-24 23:00:54,234 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:00:54,239 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 23:00:54,240 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 23:00:54,243 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-5EC2DD7D | Utilisateur Premium activé.
+2026-10-24 23:00:54,244 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (9.91ms)
+2026-10-24 23:00:54,265 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:00:54,268 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 23:00:54,270 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 23:00:54,270 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 23:00:54,272 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (6.26ms)
+2026-10-24 23:00:54,298 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 23:00:54,309 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (11.49ms)
+2026-10-24 23:00:54,316 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 23:00:54,323 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (6.55ms)
+2026-10-24 23:00:54,442 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:00:54,447 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (5.57ms)
+2026-10-24 23:00:54,452 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:00:54,454 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (2.65ms)
+2026-10-24 23:00:54,460 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:00:54,463 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (3.43ms)
+2026-10-24 23:00:54,480 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:00:54,483 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (2.30ms)
+2026-10-24 23:00:54,505 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:00:54,599 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (93.13ms)
+2026-10-24 23:00:54,619 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:00:54,626 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (7.06ms)
+2026-10-24 23:00:54,651 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:00:54,655 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 422 (4.21ms)
+2026-10-24 23:00:54,682 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:00:54,685 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (3.36ms)
+2026-10-24 23:00:54,704 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:00:54,709 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (4.70ms)
+2026-10-24 23:00:54,732 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:00:54,736 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (3.71ms)
+2026-10-24 23:00:54,741 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:00:54,746 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (4.42ms)
+2026-10-24 23:00:54,751 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:00:54,755 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 403 (3.87ms)
+2026-10-24 23:00:54,774 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:00:54,779 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (5.01ms)
+2026-10-24 23:03:05,547 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:03:05,560 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 23:03:05,568 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 23:03:05,576 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-A3F4A1BA | Utilisateur Premium activé.
+2026-10-24 23:03:05,578 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (30.96ms)
+2026-10-24 23:03:05,586 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 23:03:05,597 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (11.29ms)
+2026-10-24 23:03:05,603 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 23:03:05,609 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (6.64ms)
+2026-10-24 23:03:05,614 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 23:03:05,619 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (4.30ms)
+2026-10-24 23:03:05,653 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 23:03:05,660 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 23:03:05,660 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (7.91ms)
+2026-10-24 23:03:05,678 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:03:05,682 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 23:03:05,683 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 23:03:05,686 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-AEFE4453 | Utilisateur Premium activé.
+2026-10-24 23:03:05,688 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (9.42ms)
+2026-10-24 23:03:05,709 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:03:05,712 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (3.09ms)
+2026-10-24 23:03:05,733 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:03:05,737 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 23:03:05,739 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 23:03:05,744 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-6C7016C6 | Utilisateur Premium activé.
+2026-10-24 23:03:05,745 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (12.51ms)
+2026-10-24 23:03:05,765 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:03:05,768 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 23:03:05,770 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 23:03:05,770 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 23:03:05,772 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (6.51ms)
+2026-10-24 23:03:05,796 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 23:03:05,807 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (11.09ms)
+2026-10-24 23:03:05,815 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 23:03:05,824 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (9.16ms)
+2026-10-24 23:03:05,919 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:03:05,923 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (4.08ms)
+2026-10-24 23:03:05,929 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:03:05,931 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (1.85ms)
+2026-10-24 23:03:05,937 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:03:05,940 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (3.15ms)
+2026-10-24 23:03:05,958 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:03:05,960 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (2.34ms)
+2026-10-24 23:03:05,979 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:03:06,077 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (97.87ms)
+2026-10-24 23:03:06,104 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:03:06,109 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (5.09ms)
+2026-10-24 23:03:06,141 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:03:06,146 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 422 (5.17ms)
+2026-10-24 23:03:06,180 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:03:06,186 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (5.49ms)
+2026-10-24 23:03:06,216 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:03:06,225 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (8.76ms)
+2026-10-24 23:03:06,253 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:03:06,257 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (3.76ms)
+2026-10-24 23:03:06,268 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:03:06,271 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (3.66ms)
+2026-10-24 23:03:06,276 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:03:06,279 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 403 (2.54ms)
+2026-10-24 23:03:06,307 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:03:06,312 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (5.33ms)
+2026-10-24 23:04:58,498 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:04:58,510 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 23:04:58,519 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 23:04:58,527 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-C79DF69D | Utilisateur Premium activé.
+2026-10-24 23:04:58,529 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (30.87ms)
+2026-10-24 23:04:58,537 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 23:04:58,550 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (13.61ms)
+2026-10-24 23:04:58,555 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 23:04:58,560 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (5.61ms)
+2026-10-24 23:04:58,565 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 23:04:58,568 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (2.80ms)
+2026-10-24 23:04:58,592 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 23:04:58,599 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 23:04:58,600 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (7.64ms)
+2026-10-24 23:04:58,624 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:04:58,628 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 23:04:58,629 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 23:04:58,632 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-435907FD | Utilisateur Premium activé.
+2026-10-24 23:04:58,634 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (9.51ms)
+2026-10-24 23:04:58,658 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:04:58,662 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (4.26ms)
+2026-10-24 23:04:58,685 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:04:58,688 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 23:04:58,689 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 23:04:58,691 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-BD56701B | Utilisateur Premium activé.
+2026-10-24 23:04:58,692 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (7.69ms)
+2026-10-24 23:04:58,714 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:04:58,718 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 23:04:58,719 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 23:04:58,720 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 23:04:58,721 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (6.69ms)
+2026-10-24 23:04:58,742 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 23:04:58,753 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (11.02ms)
+2026-10-24 23:04:58,760 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 23:04:58,766 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (5.84ms)
+2026-10-24 23:04:58,866 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:04:58,870 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (3.96ms)
+2026-10-24 23:04:58,877 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:04:58,879 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (2.10ms)
+2026-10-24 23:04:58,884 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:04:58,889 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (4.83ms)
+2026-10-24 23:04:58,911 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:04:58,914 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (3.08ms)
+2026-10-24 23:04:58,936 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:04:59,030 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (93.70ms)
+2026-10-24 23:04:59,053 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:04:59,057 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (3.92ms)
+2026-10-24 23:04:59,090 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:04:59,093 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 422 (2.90ms)
+2026-10-24 23:04:59,119 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:04:59,124 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (4.04ms)
+2026-10-24 23:04:59,149 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:04:59,155 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (6.00ms)
+2026-10-24 23:04:59,175 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:04:59,178 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (2.98ms)
+2026-10-24 23:04:59,185 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:04:59,188 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (2.65ms)
+2026-10-24 23:04:59,192 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:04:59,194 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 403 (2.67ms)
+2026-10-24 23:04:59,215 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:04:59,218 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (3.54ms)
+2026-10-24 23:06:38,264 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:06:38,275 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 23:06:38,282 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 23:06:38,290 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-6311F618 | Utilisateur Premium activé.
+2026-10-24 23:06:38,291 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (26.90ms)
+2026-10-24 23:06:38,299 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 23:06:38,309 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (10.49ms)
+2026-10-24 23:06:38,314 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 23:06:38,322 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (7.31ms)
+2026-10-24 23:06:38,327 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 23:06:38,331 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (3.47ms)
+2026-10-24 23:06:38,360 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 23:06:38,366 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 23:06:38,367 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (7.59ms)
+2026-10-24 23:06:38,389 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:06:38,392 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 23:06:38,395 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 23:06:38,399 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-CB897DA3 | Utilisateur Premium activé.
+2026-10-24 23:06:38,400 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (11.27ms)
+2026-10-24 23:06:38,429 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:06:38,433 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (4.06ms)
+2026-10-24 23:06:38,454 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:06:38,457 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 23:06:38,458 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 23:06:38,460 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-E75C0DBE | Utilisateur Premium activé.
+2026-10-24 23:06:38,462 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (8.23ms)
+2026-10-24 23:06:38,491 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:06:38,494 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 23:06:38,497 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 23:06:38,498 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 23:06:38,500 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (8.65ms)
+2026-10-24 23:06:38,528 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 23:06:38,540 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (12.31ms)
+2026-10-24 23:06:38,547 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 23:06:38,552 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (5.05ms)
+2026-10-24 23:06:38,644 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:06:38,648 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (4.15ms)
+2026-10-24 23:06:38,664 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:06:38,666 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (2.33ms)
+2026-10-24 23:06:38,671 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:06:38,674 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (2.08ms)
+2026-10-24 23:06:38,694 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:06:38,698 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (4.05ms)
+2026-10-24 23:06:38,753 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:06:38,795 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (41.92ms)
+2026-10-24 23:06:38,825 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:06:38,903 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (77.69ms)
+2026-10-24 23:06:38,934 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:06:38,939 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 422 (4.90ms)
+2026-10-24 23:06:38,975 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:06:38,983 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (8.41ms)
+2026-10-24 23:06:39,010 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:06:39,027 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (16.89ms)
+2026-10-24 23:06:39,034 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:06:39,052 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (17.61ms)
+2026-10-24 23:06:39,057 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:06:39,060 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 403 (2.69ms)
+2026-10-24 23:06:39,076 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:06:39,080 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (3.52ms)
+2026-10-24 23:08:11,567 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:08:11,579 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 23:08:11,585 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 23:08:11,593 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-39D72A9C | Utilisateur Premium activé.
+2026-10-24 23:08:11,594 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (27.02ms)
+2026-10-24 23:08:11,599 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 23:08:11,609 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (9.90ms)
+2026-10-24 23:08:11,614 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 23:08:11,620 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (6.04ms)
+2026-10-24 23:08:11,625 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 23:08:11,628 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (3.54ms)
+2026-10-24 23:08:11,664 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 23:08:11,671 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 23:08:11,672 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (7.61ms)
+2026-10-24 23:08:11,702 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:08:11,705 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 23:08:11,706 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 23:08:11,711 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-18DDBC81 | Utilisateur Premium activé.
+2026-10-24 23:08:11,713 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (11.02ms)
+2026-10-24 23:08:11,737 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:08:11,742 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (4.19ms)
+2026-10-24 23:08:11,763 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:08:11,767 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 23:08:11,769 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 23:08:11,771 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-71FA6E48 | Utilisateur Premium activé.
+2026-10-24 23:08:11,772 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (9.49ms)
+2026-10-24 23:08:11,803 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:08:11,807 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 23:08:11,809 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 23:08:11,810 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 23:08:11,811 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (7.75ms)
+2026-10-24 23:08:11,831 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 23:08:11,845 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (13.41ms)
+2026-10-24 23:08:11,851 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 23:08:11,857 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (5.23ms)
+2026-10-24 23:08:11,963 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:08:11,967 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (4.27ms)
+2026-10-24 23:08:11,972 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:08:11,974 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (2.50ms)
+2026-10-24 23:08:11,981 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:08:11,985 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (3.86ms)
+2026-10-24 23:08:12,005 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:08:12,009 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (3.70ms)
+2026-10-24 23:08:12,053 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:08:12,070 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (17.51ms)
+2026-10-24 23:08:12,093 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:08:12,164 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (70.95ms)
+2026-10-24 23:08:12,200 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:08:12,204 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 422 (4.03ms)
+2026-10-24 23:08:12,233 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:08:12,236 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (3.82ms)
+2026-10-24 23:08:12,262 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:08:12,278 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (16.09ms)
+2026-10-24 23:08:12,284 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:08:12,298 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (14.17ms)
+2026-10-24 23:08:12,305 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:08:12,308 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 403 (3.88ms)
+2026-10-24 23:08:12,330 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:08:12,335 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (5.22ms)
+2026-10-24 23:08:24,915 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:08:24,926 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 23:08:24,934 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 23:08:24,944 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-0037F0D2 | Utilisateur Premium activé.
+2026-10-24 23:08:24,945 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (29.98ms)
+2026-10-24 23:08:24,959 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 23:08:24,971 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (11.92ms)
+2026-10-24 23:08:24,976 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 23:08:24,983 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (7.39ms)
+2026-10-24 23:08:24,989 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 23:08:24,995 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (5.46ms)
+2026-10-24 23:08:25,033 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 23:08:25,039 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 23:08:25,043 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (9.57ms)
+2026-10-24 23:08:25,068 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:08:25,070 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 23:08:25,072 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 23:08:25,074 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-170D83E0 | Utilisateur Premium activé.
+2026-10-24 23:08:25,076 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (7.85ms)
+2026-10-24 23:08:25,102 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:08:25,106 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (3.90ms)
+2026-10-24 23:08:25,139 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:08:25,145 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 23:08:25,147 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 23:08:25,150 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-D138ED41 | Utilisateur Premium activé.
+2026-10-24 23:08:25,152 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (12.81ms)
+2026-10-24 23:08:25,186 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:08:25,190 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 23:08:25,191 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 23:08:25,191 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 23:08:25,192 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (6.39ms)
+2026-10-24 23:08:25,223 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 23:08:25,236 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (12.33ms)
+2026-10-24 23:08:25,242 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 23:08:25,248 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (5.67ms)
+2026-10-24 23:08:25,379 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:08:25,387 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (7.44ms)
+2026-10-24 23:08:25,398 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:08:25,402 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (3.79ms)
+2026-10-24 23:08:25,412 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:08:25,421 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (8.65ms)
+2026-10-24 23:08:25,454 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:08:25,459 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (4.94ms)
+2026-10-24 23:08:25,495 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:08:25,510 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (15.41ms)
+2026-10-24 23:08:25,530 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:08:25,609 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (78.36ms)
+2026-10-24 23:08:25,637 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:08:25,641 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 422 (3.86ms)
+2026-10-24 23:08:25,668 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:08:25,671 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (3.07ms)
+2026-10-24 23:08:25,696 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:08:25,712 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (16.59ms)
+2026-10-24 23:08:25,720 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:08:25,735 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (14.60ms)
+2026-10-24 23:08:25,742 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:08:25,745 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 403 (2.77ms)
+2026-10-24 23:08:25,767 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:08:25,770 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (3.61ms)
+2026-10-24 23:09:50,203 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:09:50,215 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 23:09:50,223 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 23:09:50,232 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-61D3D19A | Utilisateur Premium activé.
+2026-10-24 23:09:50,233 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (30.42ms)
+2026-10-24 23:09:50,246 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 23:09:50,259 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (13.20ms)
+2026-10-24 23:09:50,266 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 23:09:50,276 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (9.61ms)
+2026-10-24 23:09:50,283 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 23:09:50,288 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (4.82ms)
+2026-10-24 23:09:50,327 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 23:09:50,333 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 23:09:50,334 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (6.84ms)
+2026-10-24 23:09:50,359 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:09:50,362 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 23:09:50,364 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 23:09:50,367 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-E670DB0D | Utilisateur Premium activé.
+2026-10-24 23:09:50,368 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (9.21ms)
+2026-10-24 23:09:50,390 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:09:50,395 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (4.93ms)
+2026-10-24 23:09:50,417 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:09:50,422 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 23:09:50,424 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 23:09:50,427 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-8492E906 | Utilisateur Premium activé.
+2026-10-24 23:09:50,429 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (11.50ms)
+2026-10-24 23:09:50,458 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:09:50,462 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 23:09:50,463 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 23:09:50,464 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 23:09:50,466 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (8.18ms)
+2026-10-24 23:09:50,492 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 23:09:50,503 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (10.55ms)
+2026-10-24 23:09:50,516 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 23:09:50,528 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (12.39ms)
+2026-10-24 23:09:50,694 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:09:50,698 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (4.34ms)
+2026-10-24 23:09:50,702 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:09:50,705 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (2.66ms)
+2026-10-24 23:09:50,714 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:09:50,717 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (3.04ms)
+2026-10-24 23:09:50,775 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:09:50,786 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (11.00ms)
+2026-10-24 23:09:50,857 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:09:50,876 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (18.90ms)
+2026-10-24 23:09:50,898 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:09:50,980 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (82.13ms)
+2026-10-24 23:09:51,011 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:09:51,014 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 422 (2.87ms)
+2026-10-24 23:09:51,038 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:09:51,042 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (3.93ms)
+2026-10-24 23:09:51,091 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:09:51,106 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (15.14ms)
+2026-10-24 23:09:51,113 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:09:51,126 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (12.82ms)
+2026-10-24 23:09:51,134 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:09:51,137 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 403 (3.01ms)
+2026-10-24 23:09:51,164 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:09:51,172 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (7.54ms)
+2026-10-24 23:12:41,328 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:12:41,340 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 23:12:41,348 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 23:12:41,361 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-3D260F0B | Utilisateur Premium activé.
+2026-10-24 23:12:41,363 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (35.38ms)
+2026-10-24 23:12:41,375 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/verifications
+2026-10-24 23:12:41,392 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/verifications - Statut 200 (16.81ms)
+2026-10-24 23:12:41,399 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22376123456
+2026-10-24 23:12:41,411 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22376123456 - Statut 200 (11.51ms)
+2026-10-24 23:12:41,417 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/history/transactions/+22370000000
+2026-10-24 23:12:41,427 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/history/transactions/+22370000000 - Statut 404 (9.57ms)
+2026-10-24 23:12:41,481 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /
+2026-10-24 23:12:41,496 | INFO     | lakana:read_root:50 - Vérification de l'état de santé du serveur.
+2026-10-24 23:12:41,498 | INFO     | lakana:log_requests:39 -  Réponse: GET / - Statut 200 (17.43ms)
+2026-10-24 23:12:41,544 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:12:41,550 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 23:12:41,553 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 23:12:41,562 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-6F45CB74 | Utilisateur Premium activé.
+2026-10-24 23:12:41,564 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (20.26ms)
+2026-10-24 23:12:41,611 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:12:41,617 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 422 (6.94ms)
+2026-10-24 23:12:41,645 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:12:41,650 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22370123456 - Formule: PlanTypeEnum.YEARLY
+2026-10-24 23:12:41,652 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22370123456
+2026-10-24 23:12:41,658 | INFO     | lakana:initiate_payment:49 - Paiement validé avec succès ! Réf: LK-3BEC903D | Utilisateur Premium activé.
+2026-10-24 23:12:41,662 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 200 (16.89ms)
+2026-10-24 23:12:41,702 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/payments/checkout
+2026-10-24 23:12:41,709 | INFO     | lakana:initiate_payment:18 - Demande de paiement reçue pour le numéro +22376123456 - Formule: PlanTypeEnum.MONTHLY
+2026-10-24 23:12:41,711 | INFO     | lakana:initiate_payment:24 - Création d'un nouvel utilisateur avec le numéro +22376123456
+2026-10-24 23:12:41,712 | ERROR    | lakana:initiate_payment:60 - Échec du traitement du paiement pour +22376123456 : Erreur DB simulée
+2026-10-24 23:12:41,714 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/payments/checkout - Statut 500 (11.42ms)
+2026-10-24 23:12:41,764 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/reports/
+2026-10-24 23:12:41,779 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/reports/ - Statut 200 (15.05ms)
+2026-10-24 23:12:41,786 | INFO     | lakana:log_requests:32 -  Requête entrante: GET /api/v1/reports/
+2026-10-24 23:12:41,794 | INFO     | lakana:log_requests:39 -  Réponse: GET /api/v1/reports/ - Statut 200 (8.52ms)
+2026-10-24 23:12:41,946 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:12:41,952 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (5.77ms)
+2026-10-24 23:12:41,964 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:12:41,967 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (2.61ms)
+2026-10-24 23:12:41,975 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:12:41,978 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 403 (2.89ms)
+2026-10-24 23:12:42,008 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check
+2026-10-24 23:12:42,014 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check - Statut 200 (6.02ms)
+2026-10-24 23:12:42,082 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:12:42,102 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (19.93ms)
+2026-10-24 23:12:42,139 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:12:42,235 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (96.04ms)
+2026-10-24 23:12:42,275 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:12:42,283 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 422 (7.37ms)
+2026-10-24 23:12:42,340 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:12:42,350 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (9.97ms)
+2026-10-24 23:12:42,403 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:12:42,429 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (25.70ms)
+2026-10-24 23:12:42,435 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:12:42,450 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (15.01ms)
+2026-10-24 23:12:42,459 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:12:42,463 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 403 (3.28ms)
+2026-10-24 23:12:42,484 | INFO     | lakana:log_requests:32 -  Requête entrante: POST /api/v1/verifications/check-image
+2026-10-24 23:12:42,493 | INFO     | lakana:log_requests:39 -  Réponse: POST /api/v1/verifications/check-image - Statut 200 (8.66ms)

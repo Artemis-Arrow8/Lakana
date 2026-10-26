@@ -1,6 +1,6 @@
 name: frontend
-description: "Application mobile de Lakana"
-publish_to: 'none' 
+description: "Application mobile SahelSec - Bouclier numérique du Sahel"
+publish_to: 'none'
 
 version: 1.0.0+1
 
@@ -10,8 +10,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  http: ^1.2.0  
-  
+  dio: ^5.4.0
+
+  # Dépendances pour l'API, l'analyse d'image et les polices
+  http: ^1.2.0
+  image_picker: ^1.0.7
+  google_fonts: ^6.1.0
+  cupertino_icons: ^1.0.6
 
 dev_dependencies:
   flutter_test:
@@ -19,4 +24,4 @@ dev_dependencies:
   flutter_lints: ^3.0.0
 
 flutter:
-  uses-material-design: true
+  uses-material-design: true 

@@ -1,5 +1,4 @@
 import pytest
-
 from fastapi.testclient import TestClient
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -8,7 +7,7 @@ from sqlalchemy.pool import StaticPool
 from app.main import app
 from app.database import Base, get_db
 
-# Base de données SQLite en mémoire pour l'isolation totale des tests
+# Utilisation d'une base de données SQLite en mémoire pour une isolation totale des tests[cite: 3]
 SQLALCHEMY_DATABASE_URL = "sqlite:///:memory:"
 
 engine = create_engine(
@@ -21,7 +20,7 @@ TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engin
 
 @pytest.fixture(scope="function")
 def db_session():
-    """Crée toutes les tables avant chaque test et les supprime après."""
+    """Crée toutes les tables avant chaque test et les supprime après pour un nettoyage complet[cite: 3]."""
     Base.metadata.create_all(bind=engine)
     session = TestingSessionLocal()
     try:
@@ -33,7 +32,7 @@ def db_session():
 
 @pytest.fixture(scope="function")
 def client(db_session):
-    """Fournit un TestClient FastAPI injectant la session SQLite de test."""
+    """Fournit un TestClient FastAPI injectant la session SQLite de test isolée[cite: 3]."""
     def override_get_db():
         try:
             yield db_session

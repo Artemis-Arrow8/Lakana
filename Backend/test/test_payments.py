@@ -1,7 +1,8 @@
 from unittest.mock import patch
+
 def test_successful_payment(client):
     """
-    Teste l'initiation d'un paiement valide et l'activation du statut Premium.
+    Teste l'initiation d'un paiement valide (Orange Money) et l'activation du statut Premium[cite: 8].
     """
     payload = {
         "phone_number": "+22376123456",
@@ -17,21 +18,19 @@ def test_successful_payment(client):
 
 def test_invalid_phone_payment(client):
     """
-    Teste le rejet automatique d'un numéro malien incorrect grâce à la Regex Pydantic (Erreur 422).
+    Teste le rejet automatique d'un numéro malien incorrect grâce à la Regex Pydantic (Erreur 422)[cite: 8].
     """
     payload = {
-        "phone_number": "00000000",  # Numéro non conforme aux opérateurs maliens
+        "phone_number": "00000000",  # Numéro non conforme
         "provider": "WAVE",
         "plan_type": "MONTHLY"
     }
     res = client.post("/api/v1/payments/checkout", json=payload)
     assert res.status_code == 422
 
-
-
 def test_yearly_payment(client):
     """
-    Teste l'initiation d'un paiement avec un plan annuel (YEARLY) pour couvrir la branche du montant à 10000.00.
+    Teste l'initiation d'un paiement avec un plan annuel (YEARLY) et vérifie le montant appliqué (10000.00)[cite: 8].
     """
     payload = {
         "phone_number": "+22370123456",
@@ -46,14 +45,13 @@ def test_yearly_payment(client):
 
 def test_payment_internal_error(client):
     """
-    Simule une erreur interne de la base de données pour couvrir le bloc except (Erreur 500).
+    Simule une erreur de base de données pour valider la gestion de l'exception (Erreur 500)[cite: 8].
     """
     payload = {
         "phone_number": "+22376123456",
         "provider": "ORANGE_MONEY",
         "plan_type": "MONTHLY"
     }
-    # On force une exception lors du commit de la base de données
     with patch("sqlalchemy.orm.Session.commit", side_effect=Exception("Erreur DB simulée")):
         res = client.post("/api/v1/payments/checkout", json=payload)
         assert res.status_code == 500

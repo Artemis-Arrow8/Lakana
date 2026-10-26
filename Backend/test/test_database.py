@@ -3,7 +3,7 @@ from app.database import get_db
 def test_get_db_generator():
     """
     Teste le générateur get_db pour garantir l'ouverture de la session
-    et son exécution complète (couvrant le bloc finally).
+    et son exécution complète (couvrant le bloc finally pour la fermeture).
     """
     # 1. Récupération du générateur de session
     db_generator = get_db()
@@ -16,5 +16,5 @@ def test_get_db_generator():
     try:
         next(db_generator)
     except StopIteration:
-        # StopIteration est le comportement normal d'un générateur qui se termine
+        # StopIteration est le comportement normal d'un générateur Python qui se termine
         pass

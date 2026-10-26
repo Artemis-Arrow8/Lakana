@@ -1,6 +1,6 @@
 def test_create_and_get_reports(client):
     """
-    Teste la création d'un signalement citoyen (Crowdsourcing) et sa récupération.
+    Teste la création d'un signalement citoyen (Crowdsourcing) et sa récupération[cite: 9].
     """
     payload = {
         "phone_number_reported": "+22376112233",
