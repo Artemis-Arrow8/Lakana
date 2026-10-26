@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import '../../core/theme.dart';
-import '../auth/register_view.dart'; // Ou vers une page de connexion si tu en as une
+import '../auth/register_view.dart';
+import '../payment/payment_view.dart'; // Import de la page de paiement (ajuste le chemin si besoin)
+import 'about_view.dart';
+import 'security_view.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({super.key});
@@ -8,7 +11,7 @@ class ProfileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF4F6F8),
+      backgroundColor: const Color(0xFFF9F6F0),
       appBar: AppBar(
         title: const Text("Mon Profil Citoyen", style: TextStyle(fontWeight: FontWeight.bold)),
         backgroundColor: SahelSecTheme.primaryGreen,
@@ -58,7 +61,7 @@ class ProfileView extends StatelessWidget {
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: const Text(
-                            "Compte Freemium (4 essais restants)",
+                            "Compte Freemium (Protection AES active)",
                             style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: SahelSecTheme.accentOrange),
                           ),
                         ),
@@ -81,30 +84,46 @@ class ProfileView extends StatelessWidget {
               ),
               child: Column(
                 children: [
+                  // 1. Redirection active vers la page de paiement Premium
                   ListTile(
                     leading: const Icon(Icons.workspace_premium, color: SahelSecTheme.accentOrange),
-                    title: const Text("Passer à l'offre Premium"),
+                    title: const Text("Passer à l'offre Premium", style: TextStyle(fontWeight: FontWeight.bold)),
                     subtitle: const Text("Accès illimité pour 1 000 XOF/mois"),
                     trailing: const Icon(Icons.arrow_forward_ios, size: 16),
                     onTap: () {
-                      // Rediriger vers l'onglet Premium si besoin
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const PaymentView()),
+                      );
                     },
                   ),
                   const Divider(height: 1),
+                  // 2. Redirection vers la page Sécurité
                   ListTile(
                     leading: const Icon(Icons.security, color: SahelSecTheme.primaryGreen),
-                    title: const Text("Sécurité et confidentialité"),
+                    title: const Text("Sécurité et confidentialité", style: TextStyle(fontWeight: FontWeight.bold)),
                     subtitle: const Text("Politique de protection des données AES"),
                     trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const SecurityView()),
+                      );
+                    },
                   ),
                   const Divider(height: 1),
+                  // 3. Redirection vers la page À propos
                   ListTile(
                     leading: const Icon(Icons.info_outline, color: SahelSecTheme.primaryGreen),
-                    title: const Text("À propos de SahelSec"),
-                    subtitle: const Text("Version 1.0.0 • Concours AES"),
+                    title: const Text("À propos de SahelSec", style: TextStyle(fontWeight: FontWeight.bold)),
+                    subtitle: const Text("Version 1.0.0 • Concours AMRTP / AES"),
                     trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const AboutView()),
+                      );
+                    },
                   ),
                 ],
               ),

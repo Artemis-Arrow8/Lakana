@@ -20,6 +20,7 @@ class _HistoryViewState extends State<HistoryView> {
     _fetchHistory();
   }
 
+  // Récupération de l'historique depuis l'API avec gestion du mode hors-ligne / fallback
   Future<void> _fetchHistory() async {
     try {
       final data = await _apiService.getHistory();
@@ -28,7 +29,7 @@ class _HistoryViewState extends State<HistoryView> {
         _isLoading = false;
       });
     } catch (e) {
-      // En cas d'erreur réseau/CORS, on affiche une liste vide propre au lieu d'une erreur rouge agressive
+      // En cas d'erreur réseau ou CORS, on affiche une liste vide propre au lieu de bloquer l'app
       setState(() {
         _historyList = [];
         _isLoading = false;
@@ -39,10 +40,12 @@ class _HistoryViewState extends State<HistoryView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFFF9F6F0), // Fond sable doux AES unifié
       appBar: AppBar(
-        title: const Text('Historique des analyses'),
+        title: const Text('Historique des analyses', style: TextStyle(fontWeight: FontWeight.bold)),
         backgroundColor: SahelSecTheme.primaryGreen,
         foregroundColor: Colors.white,
+        elevation: 0,
       ),
       body: _isLoading
           ? const Center(

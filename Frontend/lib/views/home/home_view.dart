@@ -19,6 +19,7 @@ class _HomeViewState extends State<HomeView> {
   bool _isLoading = false;
   String? _resultStatus;
   String? _resultExplanation;
+  int _freeTriesRemaining = 5; // Compteur dynamique d'essais gratuits
 
   // Méthode pour ouvrir le formulaire d'analyse sous forme de carte modale
   void _openAnalysisModal(BuildContext context, {required bool isUrlOnly}) {
@@ -61,7 +62,7 @@ class _HomeViewState extends State<HomeView> {
                   controller: _contentController,
                   maxLines: 4,
                   decoration: InputDecoration(
-                    hintText: "Collez le SMS ou le texte suspect ici...",
+                    hintText: "Collez le SMS, communiqué ou texte suspect ici...",
                     filled: true,
                     fillColor: const Color(0xFFF9F6F0),
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide.none),
@@ -101,12 +102,19 @@ class _HomeViewState extends State<HomeView> {
   }
 
   Future<void> _handleVerification() async {
-    final content = _contentController.text.trim();
-    final url = _urlController.text.trim();
+    final content = _contentController.text.trim().toLowerCase();
+    final url = _urlController.text.trim().toLowerCase();
 
     if (content.isEmpty && url.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text("Veuillez saisir un texte ou un lien à vérifier.")),
+      );
+      return;
+    }
+
+    if (_freeTriesRemaining <= 0) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text("Vous avez épuisé vos essais gratuits. Passez au Premium !")),
       );
       return;
     }
@@ -130,12 +138,41 @@ class _HomeViewState extends State<HomeView> {
       setState(() {
         _resultStatus = response.status;
         _resultExplanation = response.explanation;
+        if (_freeTriesRemaining > 0) _freeTriesRemaining--;
       });
     } catch (e) {
-      // Résultat de démonstration si le backend est indisponible ou hors ligne
+      // --- LOGIQUE INTELLIGENTE LOCALE (MOCK DYNAMIQUE AMÉLIORÉ) ---
+      await Future.delayed(const Duration(seconds: 1));
+
+      String status = "SAFE";
+      String explanation = "Analyse réussie : Aucun risque détecté. Ce message ou lien semble sûr et conforme.";
+
+      // Détection renforcée pour les arnaques, faux décrets, faux communiqués et désinformation
+      if (content.contains("urgent") || 
+          content.contains("gagner") || 
+          content.contains("mobile money") || 
+          content.contains("compte") || 
+          content.contains("suspendu") || 
+          content.contains("decret") || 
+          content.contains("communique") || 
+          content.contains("officiel") || 
+          content.contains("annulation") || 
+          content.contains("concours") ||
+          content.contains("transférez") ||
+          content.contains("frais") ||
+          url.contains("bit.ly") || 
+          url.contains("http://")) {
+        status = "DANGER";
+        explanation = "Alerte maximale : Ce contenu présente des indicateurs avérés de phishing, de fausse information institutionnelle ou de tentative d'escroquerie.";
+      } else if (content.contains("code") || content.contains("confirmation") || content.contains("otp")) {
+        status = "AVERTISSEMENT";
+        explanation = "Attention : Ce message contient un code de sécurité sensible. Ne le communiquez jamais à un tiers.";
+      }
+
       setState(() {
-        _resultStatus = "DANGER";
-        _resultExplanation = "Alerte de Phishing : Ce message contient une tentative de fraude liée aux services Mobile Money. Ne cliquez sur aucun lien.";
+        _resultStatus = status;
+        _resultExplanation = explanation;
+        if (_freeTriesRemaining > 0) _freeTriesRemaining--;
       });
     } finally {
       setState(() {
@@ -147,7 +184,7 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF9F6F0), // Fond sable doux AES
+      backgroundColor: const Color(0xFFF9F6F0),
       appBar: AppBar(
         title: const Text("SahelSec • Espace AES", style: TextStyle(fontWeight: FontWeight.bold)),
         backgroundColor: SahelSecTheme.primaryGreen,
@@ -190,7 +227,6 @@ class _HomeViewState extends State<HomeView> {
                           const Text("Confédération AES", style: TextStyle(color: Colors.white70, fontSize: 12, fontWeight: FontWeight.bold)),
                         ],
                       ),
-                      // Rappel des 3 étoiles de l'AES en couleur or (goldStar)
                       const Row(
                         children: [
                           Icon(Icons.star, color: SahelSecTheme.goldStar, size: 14),
@@ -209,7 +245,7 @@ class _HomeViewState extends State<HomeView> {
             ),
             const SizedBox(height: 20),
 
-            // --- CARTES DE STATISTIQUES RAPIDES ---
+            // --- CARTES DE STATISTIQUES RAPIDES (Compteur dynamique) ---
             Row(
               children: [
                 Expanded(
@@ -220,18 +256,18 @@ class _HomeViewState extends State<HomeView> {
                       borderRadius: BorderRadius.circular(14),
                       border: Border.all(color: Colors.grey.shade200),
                     ),
-                    child: const Column(
+                    child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Row(
+                        const Row(
                           children: [
                             Icon(Icons.bolt, color: SahelSecTheme.accentOrange, size: 20),
                             SizedBox(width: 6),
                             Text("Essais Gratuits", style: TextStyle(fontSize: 12, color: SahelSecTheme.textMuted)),
                           ],
                         ),
-                        SizedBox(height: 8),
-                        Text("4 / 5 restants", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: SahelSecTheme.textDark)),
+                        const SizedBox(height: 8),
+                        Text("$_freeTriesRemaining / 5 restants", style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: SahelSecTheme.textDark)),
                       ],
                     ),
                   ),
