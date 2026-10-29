@@ -8,14 +8,20 @@ class ScamDetectorService:
     (Mali, Burkina Faso, Niger).
     """
 
-    # 1. Domaines officiels de confiance (Ministères, Présidences, Médias publics et de référence de l'AES)
+    # 1. Domaines officiels de confiance (Whitelisting institutionnel)
     TRUSTED_DOMAINS = [
         "gouv.ml", "primature.ml", "sante.gouv.ml", "education.gouv.ml", "ortm.ml", "maliweb.net", "malijet.com", # Mali
         "sig.gov.bf", "gouvernement.gov.bf", "rtb.bf", # Burkina Faso
         "gouv.ne", "presidence.ne", "anp.ne" # Niger
     ]
 
-    # 2. Mots-clés caractéristiques des arnaques téléphoniques et SMS (Mobile Money)
+    # 2. Domaines de phishing connus ou simulés pour les démos
+    SUSPICIOUS_DOMAINS = [
+        "orange-mali-prime.ml", "moov-cadeau.com", 
+        "wave-bonus-gratuit.net", "gagner-argent.site", "bit.ly/"
+    ]
+
+    # 3. Mots-clés forts d'arnaques Mobile Money (Indicateurs de fraude financière directe)
     PHONE_SCAM_KEYWORDS = [
         "erreur de transfert", "renvoyer l'argent", "compte bloque", "code otp",
         "gagne un lot", "loterie", "frais de dossier", "agent orange money",
@@ -23,7 +29,7 @@ class ScamDetectorService:
         "felicitations", "gros lot"
     ]
 
-    # 3. Mots-clés caractéristiques des faux décrets, communiqués et fake news
+    # 4. Mots-clés de fausses informations / Faux décrets (Nécessitent un contexte piégeux)
     FAKE_NEWS_KEYWORDS = [
         "communique officiel", "decret presidentiel", "concours exceptionnel",
         "recrutement massif de l'armee", "subvention accordee", "communique urgent",
@@ -33,67 +39,90 @@ class ScamDetectorService:
     @staticmethod
     def analyze_content(db: Session, text: str = None, url: str = None, phone: str = None) -> dict:
         """
-        Effectue une analyse multicritère d'un contenu suspect (numéro, lien, texte ou image OCR) 
-        en croisant les signalements citoyens, les sources officielles de l'AES et les mots-clés de fraude.
+        Effectue une analyse multicritère intelligente d'un contenu suspect (numéro, lien, texte)
+        en évitant les faux positifs sur les messages professionnels ou administratifs légitimes.
         """
         score = 0
         reasons = []
+        is_officially_trusted = False
 
-        # 1. Vérification du numéro de téléphone par rapport aux signalements citoyens (Crowdsourcing)
+        # -------------------------------------------------------------------------
+        # ÉTAPE 0 : Analyse préalable de l'URL pour la whitelist (Protection des sources officielles)
+        # -------------------------------------------------------------------------
+        if url:
+            url_lower = url.lower()
+            is_officially_trusted = any(domain in url_lower for domain in ScamDetectorService.TRUSTED_DOMAINS)
+
+        # Si le lien provient d'une source officielle reconnue, on court-circuite le risque
+        if is_officially_trusted:
+            return {
+                "score_risque": 0,
+                "niveau": "SÉCURISÉ",
+                "motifs": ["Source institutionnelle certifiée de l'espace AES."]
+            }
+
+        # -------------------------------------------------------------------------
+        # ÉTAPE 1 : Vérification du numéro de téléphone (Signalements citoyens / Crowdsourcing)
+        # -------------------------------------------------------------------------
         if phone:
             report_count = db.query(models.Report).filter(models.Report.phone_number_reported == phone).count()
             if report_count > 0:
-                score += 50
-                reasons.append(f"Numéro signalé {report_count} fois par la communauté de l'AES.")
+                score += 60 
+                reasons.append(f"Numéro signalé {report_count} fois par la communauté citoyenne de l'AES.")
 
-        # 2. Analyse de l'URL ou du lien Internet
+        # -------------------------------------------------------------------------
+        # ÉTAPE 2 : Analyse approfondie de l'URL ou du lien Internet fourni
+        # -------------------------------------------------------------------------
         if url:
             url_lower = url.lower()
             
-            # Vérification si le lien appartient à une source officielle de l'AES
-            is_trusted = any(domain in url_lower for domain in ScamDetectorService.TRUSTED_DOMAINS)
+            # Détection de domaines malveillants connus ou de pièges marketing/phishing
+            has_suspicious_domain = any(domain in url_lower for domain in ScamDetectorService.SUSPICIOUS_DOMAINS)
+            has_phishing_terms = any(term in url_lower for term in ["free", "bonus", "win", "cadeau", "login", "update", "verify"])
             
-            if is_trusted:
-                reasons.append("Source officielle certifiée de l'espace AES.")
-                # Le score reste bas ou à 0 car le domaine est sûr
-            else:
-                suspicious_domains = [
-                    "orange-mali-prime.ml", 
-                    "moov-cadeau.com", 
-                    "wave-bonus-gratuit.net", 
-                    "gagner-argent.site"
-                ]
-                # Détection de domaines connus ou de mots-clés pièges dans l'URL
-                if any(domain in url_lower for domain in suspicious_domains) or any(term in url_lower for term in ["free", "bonus", "win", "cadeau", "login", "update", "verify"]):
-                    score += 50
-                    reasons.append("Lien suspect détecté : connu pour le phishing ou les fausses promesses.")
-                elif not url_lower.startswith("https://"):
-                    score += 20
-                    reasons.append("Lien non sécurisé (HTTP simple).")
+            if has_suspicious_domain or has_phishing_terms:
+                score += 50
+                reasons.append("Lien suspect détecté : connu pour le phishing ou l'hameçonnage.")
+            elif not url_lower.startswith("https://"):
+                score += 15
+                reasons.append("Lien non sécurisé (protocole HTTP simple détecté).")
 
-        # 3. Analyse textuelle (SMS, messages ou texte extrait par OCR d'une image/décret)
+        # -------------------------------------------------------------------------
+        # ÉTAPE 3 : Analyse textuelle intelligente (SMS, messages ou OCR) avec gestion du contexte
+        # -------------------------------------------------------------------------
         if text:
             text_lower = text.lower()
             
-            # Recherche de mots-clés d'arnaques Mobile Money / Téléphoniques
+            # A. Détection des arnaques financières / Mobile Money (Tolérance zéro)
             found_phone_scams = [kw for kw in ScamDetectorService.PHONE_SCAM_KEYWORDS if kw in text_lower]
             if found_phone_scams:
-                score += len(found_phone_scams) * 25
-                reasons.append(f"Suspicion d'arnaque Mobile Money (Termes : {', '.join(found_phone_scams)}).")
+                score += 50  # Un seul mot-clé fort suffit à alerter sérieusement
+                reasons.append(f"Suspicion d'arnaque financière / Mobile Money (Indicateur : {found_phone_scams[0]}).")
 
-            # Recherche de mots-clés de faux décrets / Fake news institutionnelles
+            # B. Détection des faux décrets / Fake news (Condition stricte : couplé à un appel à l'action ou lien douteux)
             found_fake_news = [kw for kw in ScamDetectorService.FAKE_NEWS_KEYWORDS if kw in text_lower]
+            
             if found_fake_news:
-                score += len(found_fake_news) * 25
-                reasons.append(f"Formules caractéristiques de désinformation ou de faux décrets (Termes : {', '.join(found_fake_news)}).")
+                # Le piège classique : un faux décret s'accompagne souvent d'une URL louche ou d'une urgence feinte
+                has_call_to_action = any(action in text_lower for action in ["cliquez", "ici", "lien", "immédiatement", "partager"])
+                
+                if url or has_call_to_action:
+                    score += 45
+                    reasons.append(f"Formule de désinformation / Faux décret associée à un lien ou un appel à l'action suspect.")
+                else:
+                    # Si c'est juste le mot mentionné sans lien ni piège (ex: message de coordination interne), le risque est minime
+                    score += 10
+                    reasons.append("Mention administrative sensible détectée (contexte à vérifier).")
 
-        # Plafonnement du score de risque à un maximum de 100
+        # -------------------------------------------------------------------------
+        # ÉTAPE 4 : Plafonnement et classification finale du niveau de risque
+        # -------------------------------------------------------------------------
         score = min(score, 100)
 
-        # Détermination du niveau de risque final selon le score calculé
-        if score >= 70:
+        # Seuils ajustés pour éviter les faux positifs lors de la démo
+        if score >= 60:
             risk_level = "DANGEREUX"
-        elif score >= 35:
+        elif score >= 25:
             risk_level = "SUSPECT"
         else:
             risk_level = "SÉCURISÉ"
