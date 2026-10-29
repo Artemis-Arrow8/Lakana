@@ -21,15 +21,20 @@ class ScamDetectorService:
         "wave-bonus-gratuit.net", "gagner-argent.site", "bit.ly/"
     ]
 
-    # 3. Mots-clés forts d'arnaques Mobile Money (Indicateurs de fraude financière directe)
+    # 3. Vraies arnaques financières / Mobile Money directes (SANS "code otp" pour éviter les faux positifs)
     PHONE_SCAM_KEYWORDS = [
-        "erreur de transfert", "renvoyer l'argent", "compte bloque", "code otp",
+        "erreur de transfert", "renvoyer l'argent", "compte bloque",
         "gagne un lot", "loterie", "frais de dossier", "agent orange money",
         "agent moov", "wave validation", "bloquer votre puce", "numero gagnant",
         "felicitations", "gros lot"
     ]
 
-    # 4. Mots-clés de fausses informations / Faux décrets (Nécessitent un contexte piégeux)
+    # 4. Mots-clés de codes de confirmation / OTP (Sensibles -> Génère un AVERTISSEMENT : Ne pas partager)
+    SENSITIVE_OTP_KEYWORDS = [
+        "code otp", "code de confirmation", "mot de passe", "code secret"
+    ]
+
+    # 5. Mots-clés de fausses informations / Faux décrets
     FAKE_NEWS_KEYWORDS = [
         "communique officiel", "decret presidentiel", "concours exceptionnel",
         "recrutement massif de l'armee", "subvention accordee", "communique urgent",
@@ -40,20 +45,19 @@ class ScamDetectorService:
     def analyze_content(db: Session, text: str = None, url: str = None, phone: str = None) -> dict:
         """
         Effectue une analyse multicritère intelligente d'un contenu suspect (numéro, lien, texte)
-        en évitant les faux positifs sur les messages professionnels ou administratifs légitimes.
+        en évitant les faux positifs sur les messages de sensibilisation OTP.
         """
         score = 0
         reasons = []
         is_officially_trusted = False
 
         # -------------------------------------------------------------------------
-        # ÉTAPE 0 : Analyse préalable de l'URL pour la whitelist (Protection des sources officielles)
+        # ÉTAPE 0 : Analyse préalable de l'URL pour la whitelist (Sources officielles)
         # -------------------------------------------------------------------------
         if url:
             url_lower = url.lower()
             is_officially_trusted = any(domain in url_lower for domain in ScamDetectorService.TRUSTED_DOMAINS)
 
-        # Si le lien provient d'une source officielle reconnue, on court-circuite le risque
         if is_officially_trusted:
             return {
                 "score_risque": 0,
@@ -62,21 +66,19 @@ class ScamDetectorService:
             }
 
         # -------------------------------------------------------------------------
-        # ÉTAPE 1 : Vérification du numéro de téléphone (Signalements citoyens / Crowdsourcing)
+        # ÉTAPE 1 : Vérification du numéro de téléphone (Crowdsourcing)
         # -------------------------------------------------------------------------
         if phone:
             report_count = db.query(models.Report).filter(models.Report.phone_number_reported == phone).count()
             if report_count > 0:
-                score += 60 
+                score += 60  
                 reasons.append(f"Numéro signalé {report_count} fois par la communauté citoyenne de l'AES.")
 
         # -------------------------------------------------------------------------
-        # ÉTAPE 2 : Analyse approfondie de l'URL ou du lien Internet fourni
+        # ÉTAPE 2 : Analyse de l'URL ou du lien Internet
         # -------------------------------------------------------------------------
         if url:
             url_lower = url.lower()
-            
-            # Détection de domaines malveillants connus ou de pièges marketing/phishing
             has_suspicious_domain = any(domain in url_lower for domain in ScamDetectorService.SUSPICIOUS_DOMAINS)
             has_phishing_terms = any(term in url_lower for term in ["free", "bonus", "win", "cadeau", "login", "update", "verify"])
             
@@ -88,30 +90,33 @@ class ScamDetectorService:
                 reasons.append("Lien non sécurisé (protocole HTTP simple détecté).")
 
         # -------------------------------------------------------------------------
-        # ÉTAPE 3 : Analyse textuelle intelligente (SMS, messages ou OCR) avec gestion du contexte
+        # ÉTAPE 3 : Analyse textuelle intelligente
         # -------------------------------------------------------------------------
         if text:
             text_lower = text.lower()
             
-            # A. Détection des arnaques financières / Mobile Money (Tolérance zéro)
+            # A. Détection des arnaques financières / Mobile Money (DANGER - Score fort : 65)
             found_phone_scams = [kw for kw in ScamDetectorService.PHONE_SCAM_KEYWORDS if kw in text_lower]
             if found_phone_scams:
-                score += 50  # Un seul mot-clé fort suffit à alerter sérieusement
+                score += 65  
                 reasons.append(f"Suspicion d'arnaque financière / Mobile Money (Indicateur : {found_phone_scams[0]}).")
 
-            # B. Détection des faux décrets / Fake news (Condition stricte : couplé à un appel à l'action ou lien douteux)
+            # B. Détection des messages sensibles contenant un code OTP (AVERTISSEMENT - Score modéré : 35)
+            has_sensitive_otp = any(kw in text_lower for kw in ScamDetectorService.SENSITIVE_OTP_KEYWORDS)
+            if has_sensitive_otp:
+                score += 35  
+                reasons.append("Avertissement de sécurité : Contient un code de confirmation. Ne jamais le communiquer à un tiers.")
+
+            # C. Détection des faux décrets / Fake news
             found_fake_news = [kw for kw in ScamDetectorService.FAKE_NEWS_KEYWORDS if kw in text_lower]
-            
             if found_fake_news:
-                # Le piège classique : un faux décret s'accompagne souvent d'une URL louche ou d'une urgence feinte
                 has_call_to_action = any(action in text_lower for action in ["cliquez", "ici", "lien", "immédiatement", "partager"])
                 
                 if url or has_call_to_action:
-                    score += 45
-                    reasons.append(f"Formule de désinformation / Faux décret associée à un lien ou un appel à l'action suspect.")
+                    score += 50
+                    reasons.append("Formule de désinformation / Faux décret associée à un lien ou un appel à l'action suspect.")
                 else:
-                    # Si c'est juste le mot mentionné sans lien ni piège (ex: message de coordination interne), le risque est minime
-                    score += 10
+                    score += 15
                     reasons.append("Mention administrative sensible détectée (contexte à vérifier).")
 
         # -------------------------------------------------------------------------
@@ -119,11 +124,14 @@ class ScamDetectorService:
         # -------------------------------------------------------------------------
         score = min(score, 100)
 
-        # Seuils ajustés pour éviter les faux positifs lors de la démo
-        if score >= 60:
+        # Seuils pour la démo :
+        # - >= 65 : DANGEREUX (Rouge)
+        # - Entre 30 et 64 : AVERTISSEMENT (Orange)
+        # - < 30 : SÉCURISÉ (Vert)
+        if score >= 65:
             risk_level = "DANGEREUX"
-        elif score >= 25:
-            risk_level = "SUSPECT"
+        elif score >= 30:
+            risk_level = "AVERTISSEMENT"
         else:
             risk_level = "SÉCURISÉ"
 
